@@ -185,11 +185,11 @@
       }
     }
   ]);
-  const baseUrl ='http://localhost:9080/cornerstoneTools/myimages/';
+  const baseUrl ='http://localhost:9080/cornerstoneTools/';
 
   _initCornerstone();
 
-  const imageIds = [`wadouri:${baseUrl}1.dcm`, 'example://2', 'example://3'];
+  const imageIds = [`wadouri:${baseUrl}myimages/1.dcm`, 'example://2', 'example://3'];
   const stack = {
     currentImageIdIndex: 0,
     imageIds: imageIds,
@@ -498,10 +498,10 @@
 
   // Image Loader
   const config = {
-    webWorkerPath: `${baseUrl}assets/image-loader/cornerstoneWADOImageLoaderWebWorker.js`,
+    webWorkerPath: `${baseUrl}examples/assets/image-loader/cornerstoneWADOImageLoaderWebWorker.js`,
     taskConfiguration: {
       decodeTask: {
-        codecsPath: `${baseUrl}assets/image-loader/cornerstoneWADOImageLoaderCodecs.js`,
+        codecsPath: `${baseUrl}examples/assets/image-loader/cornerstoneWADOImageLoaderCodecs.js`,
       },
     },
   };
